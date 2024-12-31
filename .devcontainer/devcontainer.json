@@ -1,0 +1,8 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    "postCreateCommand": {
+        "qmk": "python3 -m pip install --user qmk",
+        "qmk-setup": "qmk setup -y"
+        // Add additional commands here
+    }
+}
