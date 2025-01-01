@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "config_common.h"
 
 // not sure i want this?
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
