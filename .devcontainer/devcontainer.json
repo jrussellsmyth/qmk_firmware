@@ -1,8 +1,21 @@
 {
-    "image":"mcr.microsoft.com/devcontainers/universal:2",
-    "postCreateCommand": {
-        "qmk": "python3 -m pip install --user qmk",
-        "qmk-setup": "qmk setup -y"
-        // Add additional commands here
+    "image": "mcr.microsoft.com/devcontainers/python",
+    "postStartCommand": {
+        "installQmk": "python3 -m pip install --user qmk"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "xaver.clang-format",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "bierner.github-markdown-preview",
+                "donjayamanne.githistory",
+                "ziyasal.vscode-open-in-github"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker": {}
     }
 }
