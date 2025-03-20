@@ -1,8 +1,9 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/python",
-    "postStartCommand": {
-        "installQmk": "python3 -m pip install --user qmk"
+    "build": {
+        "dockerfile": "Dockerfile"
     },
+    // need to do this in a postStartCommand so that we have the sources mounted and the command on the path.
+    "postStartCommand": "qmk setup -y",
     "customizations": {
         "vscode": {
             "extensions": [
